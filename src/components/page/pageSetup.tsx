@@ -8,9 +8,9 @@ interface PageSetupProps {
 
 function PageSetup({ children }: PageSetupProps) {
   return (
-    <Box paddingX="32">
+    <Box paddingX="48" overflow="clip">
       <Topbar />
-      <Box paddingTop="8">{children}</Box>
+      <Box marginTop="8">{children}</Box>
     </Box>
   );
 }
