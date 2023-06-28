@@ -162,12 +162,12 @@ function AccommodationPage() {
           video={<ControllessVimeoVideo videoId="496701258" />}
           rating={4.7}
         >
-          Escape to serenity and seclusion at Piermont Retreat, a hidden gem
-          nestled amidst the stunning landscapes of Tasmania. Surrounded by lush
-          forests and overlooking the picturesque Great Oyster Bay, this idyllic
-          retreat is a haven of tranquility. Unwind in beautifully appointed
-          cottages, savor gourmet cuisine inspired by local flavors, and
-          rejuvenate your senses with nature walks and beachfront bliss.
+          Step into a world where art meets luxury at the Henry James Art Hotel.
+          This extraordinary boutique hotel in Tasmania's heart boasts an
+          awe-inspiring collection of contemporary artwork, captivating guests
+          from the moment they enter. Immerse yourself in opulent surroundings,
+          relish in the fusion of creativity and comfort, and let the vibrant
+          energy of this artistic sanctuary inspire your every moment.
         </AccommodationOverview>
       </Grid>
     </PageSetup>
