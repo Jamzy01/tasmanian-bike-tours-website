@@ -9,7 +9,6 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import React from "react";
 import PageSetup from "../../components/page/pageSetup";
 import background from "./assets/background.jpg";
 import Quote from "../../components/quote/quote";

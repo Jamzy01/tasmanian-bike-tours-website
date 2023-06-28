@@ -1,8 +1,7 @@
-import { Box, Circle, Divider, Grid, Heading, Text } from "@chakra-ui/react";
+import { Box, Divider, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import PageBackground from "../../components/page/pageBackground";
 import PageSetup from "../../components/page/pageSetup";
-import { Rating } from "@smastrom/react-rating";
-import { Star } from "@smastrom/react-rating";
+import StarRatings from "react-star-ratings";
 
 import background from "./assets/background.jpg";
 
@@ -20,8 +19,10 @@ interface ControllessYoutubeVideoProps {
 function ControllessYoutubeVideo({ videoId }: ControllessYoutubeVideoProps) {
   return (
     <iframe
-      width="560"
-      height="315"
+      width="100%"
+      style={{
+        aspectRatio: 16 / 9,
+      }}
       src={`https://www.youtube-nocookie.com/embed/${videoId}?controls=0&loop=1&playlist=${videoId}&autoplay=true&mute=1`}
       allow="autoplay"
     />
@@ -36,8 +37,10 @@ function ControllessVideo({ source }: ControllessVideoProps) {
   return (
     <video
       src={source}
-      width="560"
-      height="315"
+      width="100%"
+      style={{
+        aspectRatio: 16 / 9,
+      }}
       autoPlay={true}
       controls={false}
       loop={true}
@@ -56,8 +59,10 @@ function ControllessVimeoVideo({ videoId }: ControllessVimeoVideoProps) {
   return (
     <iframe
       src={`https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&loop=1&byline=0&portrait=0&background=1`}
-      width="640"
-      height="300"
+      width="100%"
+      style={{
+        aspectRatio: 16 / 9,
+      }}
       allow="autoplay"
     />
   );
@@ -70,7 +75,7 @@ function AccomodationOverview({
   video,
 }: AccomodationOverviewProps) {
   return (
-    <Box
+    <GridItem
       display="flex"
       flexDirection="column"
       alignItems="center"
@@ -83,27 +88,15 @@ function AccomodationOverview({
         <Text lineHeight="initial" fontWeight="500" letterSpacing="wide">
           {title}
         </Text>
-        <Rating
-          value={Math.ceil(rating * 2) / 2}
-          readOnly
-          style={{
-            height: "0.7lh",
-            width: "4.4lh",
-          }}
-          itemStyles={{
-            itemShapes: Star,
-            activeFillColor: "var(--chakra-colors-gray-400)",
-            inactiveFillColor: "var(--chakra-colors-gray-300)",
-          }}
-        />
+        <StarRatings rating={rating} starDimension="32px" starSpacing="3px" />
       </Box>
-      <Box borderRadius="md" overflow="clip">
+      <Box borderRadius="md" overflow="clip" width="100%">
         {video}
       </Box>
       <Text textAlign="center" fontSize="lg">
         {children}
       </Text>
-    </Box>
+    </GridItem>
   );
 }
 
@@ -121,7 +114,7 @@ function AccomodationPage() {
           fontSize="6xl"
           bg="whiteAlpha.400"
           minWidth="50%"
-          paddingY="16"
+          padding="16"
           whiteSpace="nowrap"
         >
           <Divider
