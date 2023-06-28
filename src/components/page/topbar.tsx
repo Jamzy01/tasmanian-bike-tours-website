@@ -26,9 +26,9 @@ function Topbar() {
               Home
             </Button>
           </Link>
-          <Link to="/accomodation">
+          <Link to="/accommodation">
             <Button color="inherit" fontWeight="inherit">
-              Accomodation
+              Accommodation
             </Button>
           </Link>
           <Link to="/contact">

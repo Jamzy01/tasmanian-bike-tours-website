@@ -19,20 +19,18 @@ import cheese_platter from "./assets/feature_showcase/cheese_platter.jpg";
 import hotel_room from "./assets/feature_showcase/hotel_room.jpg";
 import bike_riding from "./assets/feature_showcase/bike_riding.jpg";
 
-import gorge from "./assets/days_overview/day_1/gorge.jpg";
-import buffet from "./assets/days_overview/day_1/buffet.jpg";
+import gorge from "./assets/days_overview/day1+2/gorge.jpg";
+import launceston_silo_hotel from "./assets/days_overview/day1+2/launceston_silo_hotel.png";
 
-import bay_of_fires from "./assets/days_overview/day_2/bay_of_fires.jpg";
-import penguin_tour from "./assets/days_overview/day_2/penguin_tour.jpg";
+import artifakt_cafe from "./assets/days_overview/day3/artifakt_cafe.jpeg";
+import piermount_retreat from "./assets/days_overview/day3/piermount_retreat.jpeg";
 
-import wineglass_bay from "./assets/days_overview/day_3/wineglass_bay.jpg";
-import lighthouse from "./assets/days_overview/day_3/lighthouse.jfif";
+import henry_jones_art_hotel from "./assets/days_overview/day4/henry_jones_art_hotel.jpg";
+import mount_wellington from "./assets/days_overview/day4/mount_wellington.png";
 
-import painted_cliffs from "./assets/days_overview/day_4/painted_cliffs.jpg";
-import hobart_wharf from "./assets/days_overview/day_4/hobart_wharf.jpg";
+import mona_museum from "./assets/days_overview/day5/mona_museum.webp";
+import salamanca_market from "./assets/days_overview/day5/salamanca_market.webp";
 
-import salamanca_market from "./assets/days_overview/day_5/salamanca_market.webp";
-import mona_museum from "./assets/days_overview/day_5/mona_museum.webp";
 import PageBackground from "../../components/page/pageBackground";
 
 interface PlanProps {
@@ -181,54 +179,51 @@ function HomePage() {
         </Box>
       </Box>
       <Box marginTop="16">
-        <Heading fontSize="4xl">What to expect</Heading>
+        <Heading fontSize="4xl">What's included</Heading>
         <Box display="flex" flexDirection="column" gap="8" marginTop="12">
           <Plan
-            title="Day 1"
+            title="Day 1 & 2"
             features={[
-              "Gourmet breakfast in launceston",
-              "Morning walk up to duck reach",
-              "Sightseeing up to St Helens",
+              "Duck reach walk",
+              "Lunch at Stillwater",
+              "Trip to East Tamar Winery",
+              "Dinner at Launceston Silo Cafe",
+              "Accomodation at the Launceston Silo",
             ]}
-            images={[buffet, gorge]}
-          />
-          <Plan
-            title="Day 2"
-            features={[
-              "Drive along the bay of fires",
-              "Trip to bicheno",
-              "See the penguin tour",
-            ]}
-            images={[penguin_tour, bay_of_fires]}
+            images={[gorge, launceston_silo_hotel]}
           />
           <Plan
             title="Day 3"
             features={[
-              "Trip to wineglass bay",
-              "Leisurely walks around beaches",
-              "Visit Cape Tourville lighthouse",
+              "Breakfast at Launceston Silo",
+              "Trip to Swansea",
+              "Swansea foreshore cycling experience",
+              "Lunch at Artifakt Cafe",
+              "Accomodation at Piermount Retreat",
             ]}
-            images={[lighthouse, wineglass_bay]}
+            images={[artifakt_cafe, piermount_retreat]}
           />
           <Plan
             title="Day 4"
             features={[
-              "Trip to Maria Island",
-              "See the cliffs",
-              "Lunch picnic",
-              "Return to hobart in the afternoon",
+              "Travel to hobart",
+              "Visit to Mona Art Gallery",
+              "Lunch at The Rockwall Bar and Grill",
+              "Travel to Mount Kunanyi",
+              "Dinner at The Black Footed Pig",
+              "Accomodation at The Henry Jones Art Hotel",
             ]}
-            images={[painted_cliffs, hobart_wharf]}
+            images={[mount_wellington, henry_jones_art_hotel]}
           />
           <Plan
             title="Day 5"
-            features={["Visit Salamanca Market", "Go to the Mona Museum"]}
+            features={[
+              "Breakfast at The Henry Jones Art Hotel",
+              "Visit the Salamanca Market",
+            ]}
             images={[mona_museum, salamanca_market]}
           />
         </Box>
-        <Text fontSize="xl" marginTop="24">
-          + Each day includes gourmet meals and luxurious accomodation
-        </Text>
       </Box>
       <Box paddingY="16" position="relative" color="gray.900">
         <SectionBackground />
@@ -242,7 +237,7 @@ function HomePage() {
           gap="4"
         >
           <Box height="1lh" bg="blackAlpha.200" aspectRatio={1 / 6} />
-          Our vision
+          Our passion
         </Heading>
         <Text fontSize="xl">
           Tasmania is a beautiful state with pristine lakes and untouched

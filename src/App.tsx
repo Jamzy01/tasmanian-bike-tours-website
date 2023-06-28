@@ -2,7 +2,7 @@ import "./App.css";
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home/home";
-import AccomodationPage from "./pages/accomodation/accomodation";
+import AccommodationPage from "./pages/accommodation/accommodation";
 
 const router = createHashRouter([
   {
@@ -14,8 +14,8 @@ const router = createHashRouter([
     element: <HomePage />,
   },
   {
-    path: "/accomodation",
-    element: <AccomodationPage />,
+    path: "/accommodation",
+    element: <AccommodationPage />,
   },
 ]);
 
