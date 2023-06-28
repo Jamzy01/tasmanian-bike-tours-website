@@ -122,7 +122,7 @@ function AccommodationPage() {
             borderBottomWidth="1px"
             borderColor="whiteAlpha.500"
           />
-          Accomodation
+          Accommodation
           <Divider
             width="40%"
             borderBottomWidth="1px"
