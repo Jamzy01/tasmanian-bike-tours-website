@@ -34,6 +34,7 @@ import hobart_wharf from "./assets/days_overview/day_4/hobart_wharf.jpg";
 
 import salamanca_market from "./assets/days_overview/day_5/salamanca_market.webp";
 import mona_museum from "./assets/days_overview/day_5/mona_museum.webp";
+import PageBackground from "../../components/page/pageBackground";
 
 interface PlanProps {
   title: string;
@@ -59,7 +60,13 @@ function Plan({ title, features, images }: PlanProps) {
       </Box>
       <Box display="flex" gap="8">
         {images.map((image) => (
-          <Image src={image} height="72" shadow="md" borderRadius="md" />
+          <Image
+            src={image}
+            key={image}
+            height="72"
+            shadow="md"
+            borderRadius="md"
+          />
         ))}
       </Box>
     </Box>
@@ -82,52 +89,13 @@ function SectionBackground() {
 }
 
 function HomePage() {
-  const backgroundRef = React.useRef<HTMLImageElement>(null);
-
-  React.useEffect(() => {
-    function scrollEvent() {
-      if (backgroundRef.current == null) {
-        return;
-      }
-
-      let scrollCompletion =
-        document.documentElement.scrollTop /
-        (document.documentElement.scrollHeight -
-          document.documentElement.clientHeight);
-
-      backgroundRef.current.style.transform = `translate(${0}px, ${
-        scrollCompletion * -50
-      }px) scale(${1 + scrollCompletion * 0.05})`;
-    }
-
-    scrollEvent();
-
-    window.addEventListener("scroll", scrollEvent);
-
-    return () => {
-      window.removeEventListener("scroll", scrollEvent);
-    };
-  });
-
   return (
     <PageSetup>
       <Text>Home Page</Text>
       <Heading fontSize="7xl" marginTop="16">
-        Tasmanian Adventures
+        Velour
       </Heading>
-      <Image
-        ref={backgroundRef}
-        position="fixed"
-        left={0}
-        top={0}
-        zIndex={-1}
-        src={background}
-        filter="contrast(110%) saturate(70%) opacity(50%)"
-        height="150vh"
-        width="100vw"
-        objectFit="cover"
-        userSelect="none"
-      />
+      <PageBackground image={background} />
       <Text marginTop="4" fontSize="2xl" maxWidth="60%">
         Take a trip down Tasmania's east coast taking in the views and produce
         without the hassle of transport and picking places to travel.
@@ -267,13 +235,17 @@ function HomePage() {
         <SectionBackground />
         <Heading
           fontSize="5xl"
-          textAlign="center"
-          padding="8"
+          fontFamily="Inter"
+          color="gray.800"
+          marginY="12"
           letterSpacing="wide"
+          display="flex"
+          gap="4"
         >
+          <Box height="1lh" bg="blackAlpha.200" aspectRatio={1 / 6} />
           Our vision
         </Heading>
-        <Text fontSize="2xl" textAlign="center">
+        <Text fontSize="2xl">
           Tasmania is a beautiful state with pristine lakes and untouched
           national parks throughout. Exploring the best parts of the state is
           not easy with almost no public transport and unforgiving roads, and

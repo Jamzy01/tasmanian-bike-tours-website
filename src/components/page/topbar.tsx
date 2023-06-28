@@ -1,4 +1,5 @@
 import { Box, Button, ButtonGroup, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function Topbar() {
   return (
@@ -16,22 +17,25 @@ function Topbar() {
       shadow="md"
     >
       <Text userSelect="none" marginLeft="3">
-        Tasmanian Adventures
+        Velour Tasmanian Expeditions
       </Text>
       <Box>
         <ButtonGroup color="gray.900" fontWeight="500">
-          <Button color="inherit" fontWeight="inherit">
-            Home
-          </Button>
-          <Button color="inherit" fontWeight="inherit">
-            Events
-          </Button>
-          <Button color="inherit" fontWeight="inherit">
-            Accomodation
-          </Button>
-          <Button color="inherit" fontWeight="inherit">
-            Contact
-          </Button>
+          <Link to="/home">
+            <Button color="inherit" fontWeight="inherit">
+              Home
+            </Button>
+          </Link>
+          <Link to="/accomodation">
+            <Button color="inherit" fontWeight="inherit">
+              Accomodation
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button color="inherit" fontWeight="inherit">
+              Contact
+            </Button>
+          </Link>
         </ButtonGroup>
       </Box>
     </Box>
