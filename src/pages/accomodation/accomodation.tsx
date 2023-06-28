@@ -79,21 +79,21 @@ function AccomodationOverview({
       display="flex"
       flexDirection="column"
       alignItems="center"
-      gap="12"
+      gap="8"
       bg="gray.50"
       padding="16"
       color="gray.600"
     >
-      <Box fontSize="3xl" display="flex" alignItems="center" gap="4">
+      <Box fontSize="xl" display="flex" alignItems="center" gap="4">
         <Text lineHeight="initial" fontWeight="500" letterSpacing="wide">
           {title}
         </Text>
-        <StarRatings rating={rating} starDimension="32px" starSpacing="3px" />
+        <StarRatings rating={rating} starDimension="26px" starSpacing="2px" />
       </Box>
       <Box borderRadius="md" overflow="clip" width="100%">
         {video}
       </Box>
-      <Text textAlign="center" fontSize="lg">
+      <Text textAlign="center" fontSize="md">
         {children}
       </Text>
     </GridItem>
@@ -113,7 +113,7 @@ function AccomodationPage() {
           alignItems="center"
           fontSize="6xl"
           bg="whiteAlpha.400"
-          minWidth="50%"
+          minWidth="60%"
           padding="16"
           whiteSpace="nowrap"
         >

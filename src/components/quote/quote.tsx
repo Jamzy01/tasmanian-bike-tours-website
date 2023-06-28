@@ -14,7 +14,7 @@ function Quote({ children }: QuoteProps) {
         borderColor="whiteAlpha.500"
       />
       <Text
-        fontSize="5xl"
+        fontSize="4xl"
         width="60%"
         textAlign="center"
         fontFamily="'Dancing Script', cursive"
